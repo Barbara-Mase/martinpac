@@ -9,7 +9,7 @@
         <?php if (!empty($msg)) {
             echo "<h2>$msg</h2>";
         } ?>
-        <form class="form-contact" method="post" action="route=mailer.php">
+        <form class="form-contact" method="post" action="index.php?route=mailer">
             <input type="text" id="firstname" name="firstname" placeholder="Prénom" required>
             <input type="text" id="lastname" name="lastname" placeholder="Nom" required>
             <input type="email" id="email" name="email" placeholder="Email" required>
