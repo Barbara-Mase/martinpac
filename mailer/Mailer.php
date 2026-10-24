@@ -19,7 +19,7 @@ class Mailer extends PHPMailer
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
         //Set the hostname of the mail server
-        $mail->Host = '127.0.0.1';
+        $mail->Host = 'smtp.laposte.net';
         //Use `$mail->Host = gethostbyname('smtp.gmail.com');`
         //if your network does not support SMTP over IPv6,
         //though this may cause issues with TLS
@@ -27,18 +27,18 @@ class Mailer extends PHPMailer
         //Set the SMTP port number:
         // - 465 for SMTP with implicit TLS, a.k.a. RFC8314 SMTPS or
         // - 587 for SMTP+STARTTLS
-        $mail->Port = 1025;
+        $mail->Port = 465;
 
         //Set the encryption mechanism to use:
         // - SMTPS (implicit TLS on port 465) or
         // - STARTTLS (explicit TLS on port 587)
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 
         //Whether to use SMTP authentication
-        $mail->SMTPAuth = false;
+        $mail->SMTPAuth = true;
 
         //Username to use for SMTP authentication - use full email address for gmail
-        $mail->Username = 'Martinpac.contact@proton.me';
+        $mail->Username = '';
 
         $mail->Password = '';
 
@@ -46,10 +46,10 @@ class Mailer extends PHPMailer
         //Note that with gmail you can only use your account address (same as `Username`)
         //or predefined aliases that you have configured within your account.
         //Do not use user-submitted addresses in here
-        $mail->setFrom('martinpac.contact@proton.me', 'MartinPAC contact');
+        $mail->setFrom('', 'MartinPAC contact');
 
         //Set who the message is to be sent to
-        $mail->addAddress('barbara.mase@gmail.com', 'Barbara Mase');
+        $mail->addAddress('', '');
 
         //Set an alternative reply-to address
         //This is a good place to put user-submitted addresses
