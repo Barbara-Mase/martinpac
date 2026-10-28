@@ -1,6 +1,7 @@
 
 /*Color*/
-$headergrey : #656565;
+/*Le header n'a pas tout à fait la même couleur que le logo*/
+$headergrey : #676566;
 $bluebackground : #2F8DC5;
 
 /*Fonts style */
@@ -16,12 +17,22 @@ $bluebackground : #2F8DC5;
 /*GENERAL*/
 
 * {
-  font-size: 16px;
+  box-sizing: border-box; /* On spécifie que la largeur (width) de chaque boîte comprend le padding et la bordure (par défaut, c'est seulement la largeur du contenu) */
+  font-family: "Lexend";
   margin: 0;
   padding: 0;
-  min-width: 960px;
-  font-family: "Lexend";
 }
+
+html {
+  font-size: 62.5%; /* 1rem = 10px (la formule est 10/16*100) la taille par défaut étant 16px */
+}
+
+body {
+  font-size: 1.6rem; /* on remets la taille du texte par défaut pour le body à 16px en utilisant les rem comme unité) */
+  margin: auto;
+}
+
+
 
 /*HEADER*/
 
@@ -30,6 +41,7 @@ $bluebackground : #2F8DC5;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  /*Le header n'a pas tout à fait la même couleur que le logo*/
   background-color: $headergrey;
   color: white;
 
@@ -62,6 +74,7 @@ $bluebackground : #2F8DC5;
 }
 .logo {
   height: 10em;
+  width: 15em;
 }
 
 .header-bottom {
@@ -69,11 +82,20 @@ $bluebackground : #2F8DC5;
   height: 30em;
   position: relative;
   color: white;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .slogan {
     position: absolute;
-    margin: auto;
-    width: 20em;
+    width: 40em;
+    padding-bottom: 1em;
+    letter-spacing: 0.1em;
+    margin-bottom: 15em;
+    span {
+      font-size: 5rem;
+    }
   }
   img {
     height: 100%;
@@ -83,7 +105,7 @@ $bluebackground : #2F8DC5;
 
   .blue-square {
     background-color: #2F8DC5;
-    opacity: 70%;
+    opacity: 85%;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -91,12 +113,22 @@ $bluebackground : #2F8DC5;
   .header-bottom-info {
     position: absolute;
     width: 50%;
-    margin: auto;
     margin-top: 10em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 2.5rem;
+    }
+    img {
+      margin-top: 2em;
+      width: 2.5em;
+      height: 2.5em;
+    }
     p {
       margin: auto;
     }
@@ -109,5 +141,41 @@ $bluebackground : #2F8DC5;
 
 }
 
+/*MAIN*/
+
+.container-main {
+
+  /* se servir de grid à la place de flex*/
+  section {
+    margin: 2em;
+
+    .service-list {
+      display: flex;
+      flex-direction: row;
+
+      .titre-h3 {
+        background-color: #69635F;
+        color: #2F8DC5;
+        padding: 1em;
+      }
+
+      img {
+        width: 30%;
+      }
+
+      .div-content-services {
+        background-color: #2F8DC5;
+
+        ul {
+          list-style: none;
+        }
+    }
+
+
+
+
+    }
+  }
+}
 
 
