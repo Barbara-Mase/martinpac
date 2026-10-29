@@ -9,9 +9,17 @@ $bluebackground : #2F8DC5;
   font-family : 'K2D';
   src: url('../fonts/K2D/K2D-Medium.ttf');
 }
+
 @font-face {
   font-family: 'Lexend';
-  src : url('../fonts/Lexend/static/Lexend-Medium.ttf');
+  src: url('../fonts/Lexend/static/Lexend-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('../fonts/Lexend/static/Lexend-ExtraBold.ttf') format('truetype');
+  font-weight: 900;
 }
 
 /*GENERAL*/
@@ -32,12 +40,29 @@ body {
   margin: auto;
 }
 
+p, li {
+  font-size: 2rem;
+}
+
+.titre-h3 {
+  background-color: #69635F;
+  color: #2F8DC5;
+  font-size: 2.9rem;
+  padding: 1em;
+  margin-bottom: 1.5em;
+  text-align: center;
+  letter-spacing: 0.06em;
+  font-family: 'Lexend';
+  font-weight: 800;
+  box-shadow: 2px 2px 3px #676566 ;
+  border-radius: 9px;
+}
 
 
 /*HEADER*/
 
 .header-top {
-  height: 15em;
+  height: 10em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -54,9 +79,12 @@ body {
       flex-direction: row;
       list-style: none;
 
-      li {
+       li {
         margin: 1em;
 
+        &.tel-number {
+          background-color: $bluebackground;
+        }
         a {
           text-decoration: none;
         }
@@ -66,11 +94,7 @@ body {
         }
       }
     }
-    p {
-      background-color: $bluebackground;
-    }
   }
-
 }
 .logo {
   height: 10em;
@@ -86,6 +110,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-shadow: 2px 2px 3px grey;
 
   .slogan {
     position: absolute;
@@ -93,8 +118,11 @@ body {
     padding-bottom: 1em;
     letter-spacing: 0.1em;
     margin-bottom: 15em;
+    text-align: center;
+    line-height: 3.5em;
     span {
       font-size: 5rem;
+      font-family: "K2D";
     }
   }
   img {
@@ -150,30 +178,37 @@ body {
     margin: 2em;
 
     .service-list {
-      display: flex;
-      flex-direction: row;
+      width: 50%;
+      margin: auto;
 
-      .titre-h3 {
-        background-color: #69635F;
-        color: #2F8DC5;
-        padding: 1em;
-      }
+      .flex-service {
+        display: flex;
+        justify-content: space-between;
 
-      img {
-        width: 30%;
-      }
+        img {
+          width: 50%
+        }
 
-      .div-content-services {
-        background-color: #2F8DC5;
+        .div-content-services {
+
 
         ul {
           list-style: none;
+
+          li {
+
+            display: flex; ;
+            align-items: center;
+            padding: 0.5em;
+
+            img {
+              height: 1.5em;
+              width: 1.5em;
+            }
+          }
         }
-    }
-
-
-
-
+        }
+      }
     }
   }
 }
