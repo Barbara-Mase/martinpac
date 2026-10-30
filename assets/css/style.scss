@@ -173,7 +173,8 @@ p, li {
 
 .container-main {
 
-  /* se servir de grid à la place de flex*/
+  /*Nos services */
+
   section {
     margin: 2em;
 
@@ -208,6 +209,45 @@ p, li {
           }
         }
         }
+      }
+    }
+  }
+  .bluesquare {
+    background-color: #2F8DC5;
+    width: 100%;
+    height: 25em;
+    height: 25em;
+    position: relative;
+    margin-top: 15em;
+    margin-bottom: 10em;
+
+    .nous-connaitre {
+      position: absolute;
+      margin-top: -8em;
+      width: 80%;
+      display: grid;
+      grid-template:
+      'b b a a' auto
+      'b b c c' 1fr / 1fr 1fr 1fr 1fr;
+
+      .portrait {
+        grid-area: b;
+      }
+
+      .titre-h3 {
+        grid-area: a;
+      }
+
+      .presentation {
+        grid-area: c;
+        margin-top: 4em;
+        line-height: 2em;
+        color: white;
+      }
+
+      img {
+        width: 50%;
+        margin-left: 20em;
       }
     }
   }
