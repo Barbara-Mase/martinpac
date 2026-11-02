@@ -1,11 +1,12 @@
 
-    <div>
-        <p>Contact</p>
-    </div>
-    <div class="contact-information">
-        <p class=contact-information>Ce site est la vitrine d'une entreprise fictive. Les mails ne parviennent pas à MartinPAC (qui n'existe pas) mais sont redirigée vers mon adresse mail (Barbara Mase). J'ai développé ce site dans le cadre de ma formation de développeuse web au sein de la 3W Academy. </p>
-    </div>
-    <div>
+<div class="container-main container-contact">
+    <div class="div-contact">
+        <div class="titre-h3 titre-contact" >
+            <h3 >Contact</h3>
+        </div>
+        <div class="contact-warning">
+            <p class=contact-information>Ce site est la vitrine d'une entreprise fictive. Les mails ne parviennent pas à MartinPAC (qui n'existe pas) mais sont redirigés vers mon adresse mail (Barbara Mase). J'ai développé ce site dans le cadre de ma formation de développeuse web au sein de la 3W Academy. </p>
+        </div>
         <?php if (!empty($msg)) {
             echo "<h2>$msg</h2>";
         } ?>
@@ -13,8 +14,7 @@
             <input type="text" id="firstname" name="firstname" placeholder="Prénom" required>
             <input type="text" id="lastname" name="lastname" placeholder="Nom" required>
             <input type="email" id="email" name="email" placeholder="Email" required>
-            <input type="tel" id="telephone" name="telephone" placeholder="Numéro de téléphone" pattern="0[1-9](?: [0-9]{2}){4}"/>
-            <input type="text" id="zip-code" name="zip-code" placeholder="Code portal"/>
+            <input type="tel" id="telephone" name="telephone" placeholder="Numéro de téléphone (optionnel)" pattern="0[1-9](?: [0-9]{2}){4}"/>
             <label for="subject">Ma demande concerne : </label>
             <select name="subject" id="subject">
                 <option value="job">J'ai un emploi à vous proposer</option>
@@ -37,3 +37,4 @@
             </div>
         </form>
     </div>
+</div>

@@ -286,7 +286,7 @@ p, li {
     margin-bottom: 10em;
 
     .engagement {
-      width:80%;
+      width: 80%;
       position: absolute;
       display: grid;
       grid-template:
@@ -314,6 +314,47 @@ p, li {
 
     }
   }
+
+  /*****************CONTACT***********/
+
+
 }
+
+.container-contact {
+  width: 50%;
+  margin: auto;
+
+  .div-contact {
+
+    .contact-warning {
+      background-color: lightsalmon;
+      color: darkred;
+      margin-top: 2em;
+      margin-bottom: 2em;
+      border-radius: 4px;
+      padding: 1em;
+    }
+    .form-contact {
+      display: flex;
+      flex-direction: column;
+      background-color: lightgray;
+      border-color: #2F8DC5;
+      box-shadow: 1px 1px 2px #2F8DC5;
+
+
+      input, textarea, label, select, div-agreement {
+        width: 90%;
+        border-radius: 1em;
+        padding: 1em;
+        margin: auto;
+        margin-top: 1.5em;
+
+      }
+    }
+  }
+}
+
+
+
 
 
