@@ -79,7 +79,7 @@ p, li {
       flex-direction: row;
       list-style: none;
 
-       li {
+      li {
         margin: 1em;
 
         &.tel-number {
@@ -170,6 +170,46 @@ p, li {
   }
 
 }
+/*WARNING*/
+
+.warning {
+  color: darkred;
+  background-color: lightsalmon;
+  text-align: center;
+  padding: 1em;
+}
+
+.contact-warning {
+  text-align: justify;
+}
+
+/*FOOTER*/
+
+
+.footer {
+  width: 100%;
+  background-color: $headergrey;
+  color: white;
+  margin-top: 5em;
+
+  .container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8em;
+
+    p {
+      margin: 0.3em;
+
+      &.tel-number {
+        background-color: $bluebackground;
+        padding: 0.5em;
+        border-radius: 0.2em;
+      }
+    }
+  }
+}
+
 
 /*MAIN*/
 
@@ -342,7 +382,7 @@ p, li {
       box-shadow: 1px 1px 2px #2F8DC5;
 
 
-      input, textarea, label, select, div-agreement {
+      input, textarea, label, select, .div-agreement, .div-button  {
         width: 90%;
         border-radius: 1em;
         padding: 1em;
@@ -350,10 +390,42 @@ p, li {
         margin-top: 1.5em;
 
       }
+
+
+      .div-agreement {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        width: 90%;
+        margin: 1.5em auto 0;
+
+
+        input[type="checkbox"] {
+          width: 1.5em;
+          height: 1.5em;
+          padding: 0;
+          margin: 0;
+          flex-shrink: 0;
+        }
+         p {
+           margin-left: 2em;
+         }
+      }
+
+      .div-button {
+        text-align: center;
+
+        button {
+          font-size: 2rem;
+          margin-top: 0;
+          padding: 1em;
+          width: 35%;
+          box-shadow: 1px 1px 2px black;
+        }
+      }
     }
   }
 }
-
 
 
 

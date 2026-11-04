@@ -53,7 +53,7 @@ class Mailer extends PHPMailer
 
         //Set an alternative reply-to address
         //This is a good place to put user-submitted addresses
-        if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+        if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) && preg_match($_POST("not-a-bot"), 7)) {
             //Put the submitter's address in a reply-to header
             //This will fail if the address provided is invalid,
             //in which case we should ignore the whole request

@@ -4,8 +4,8 @@
         <div class="titre-h3 titre-contact" >
             <h3 >Contact</h3>
         </div>
-        <div class="contact-warning">
-            <p class=contact-information>Ce site est la vitrine d'une entreprise fictive. Les mails ne parviennent pas à MartinPAC (qui n'existe pas) mais sont redirigés vers mon adresse mail (Barbara Mase). J'ai développé ce site dans le cadre de ma formation de développeuse web au sein de la 3W Academy. </p>
+        <div class="warning contact-warning">
+            <p>Ce site est la vitrine d'une entreprise fictive. Les mails ne parviennent pas à MartinPAC (qui n'existe pas) mais sont redirigés vers mon adresse mail (Barbara Mase). J'ai développé ce site dans le cadre de ma formation "développeur web et web mobile" au sein de la 3W Academy. </p>
         </div>
         <?php if (!empty($msg)) {
             echo "<h2>$msg</h2>";
@@ -32,7 +32,9 @@
                 <input type="checkbox" name="agreement" id="agreement" required>
                 <p>En cochant cette case, j'accepte que mes données soient utilisées pour me contacter</p>
             </div>
-            <div>
+                <label for="not-a-bot">Combien font 15 + 2 ?</label>
+                <input  class="not-a-bot-input" type="number" name="not-a-bot" id="not-a-bot" required>
+            <div class="div-button">
                 <button type="submit" value="send">Envoyer</button>
             </div>
         </form>
