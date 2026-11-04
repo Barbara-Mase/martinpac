@@ -4,6 +4,12 @@
 $headergrey : #676566;
 $bluebackground : #2F8DC5;
 
+@mixin mobile {
+  @media screen and (max-width: 478px) {
+    @content;
+  }
+}
+
 /*Fonts style */
 @font-face {
   font-family : 'K2D';
@@ -24,7 +30,7 @@ $bluebackground : #2F8DC5;
 
 /*GENERAL*/
 
-* {
+*, *::before, *::after {
   box-sizing: border-box; /* On spécifie que la largeur (width) de chaque boîte comprend le padding et la bordure (par défaut, c'est seulement la largeur du contenu) */
   font-family: "Lexend";
   margin: 0;
@@ -37,7 +43,6 @@ html {
 
 body {
   font-size: 1.6rem; /* on remets la taille du texte par défaut pour le body à 16px en utilisant les rem comme unité) */
-  margin: auto;
 }
 
 p, li {
@@ -59,16 +64,35 @@ p, li {
 }
 
 
+a {
+  text-decoration: none;
+  color: white;
+}
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
 /*HEADER*/
 
+
 .header-top {
+  width: 100%;
   height: 10em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   /*Le header n'a pas tout à fait la même couleur que le logo*/
   background-color: $headergrey;
   color: white;
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
 
   .header-top-right {
     display: flex;
@@ -78,6 +102,11 @@ p, li {
       display: flex;
       flex-direction: row;
       list-style: none;
+      align-items: center;
+      @include mobile {
+        flex-direction: column;
+        justify-content: center;
+      }
 
       li {
         margin: 1em;
@@ -86,13 +115,6 @@ p, li {
           background-color: $bluebackground;
           padding: 0.5em;
           border-radius: 0.2em;
-        }
-        a {
-          text-decoration: none;
-        }
-        a:visited {
-          color: white;
-          text-decoration: none;
         }
       }
     }
@@ -205,6 +227,10 @@ p, li {
         background-color: $bluebackground;
         padding: 0.5em;
         border-radius: 0.2em;
+      }
+
+      a {
+        text-decoration: underline;
       }
     }
   }
@@ -366,6 +392,10 @@ p, li {
 
   .div-contact {
 
+    .titre-h3 {
+      margin-top: 2em;
+    }
+
     .contact-warning {
       background-color: lightsalmon;
       color: darkred;
@@ -380,15 +410,20 @@ p, li {
       background-color: lightgray;
       border-color: #2F8DC5;
       box-shadow: 1px 1px 2px #2F8DC5;
+      padding-top: 2em;
 
 
       input, textarea, label, select, .div-agreement, .div-button  {
         width: 90%;
         border-radius: 1em;
-        padding: 1em;
+        padding: 1.2em;
         margin: auto;
-        margin-top: 1.5em;
-
+        margin-bottom: 1.5em;
+        font-size: 1.1em;
+      }
+      label {
+        margin-bottom: 0;
+        font-size: 1.2em;
       }
 
 
@@ -398,6 +433,7 @@ p, li {
         gap: 0.5rem;
         width: 90%;
         margin: 1.5em auto 0;
+        margin-top: 0;
 
 
         input[type="checkbox"] {
