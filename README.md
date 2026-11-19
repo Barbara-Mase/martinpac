@@ -3,9 +3,9 @@
 Ce site vitrine présente l'entreprise fictive MartinPAC spécialisée dans les pompes à chaleur. Ce projet est issu de ma formation "Développeur web et web mobile" au sein de la 3W Academy
 
 ##Stack technique
-PHP 8.3
-Scss
-HTML/CSS
+- PHP 8.3
+- Scss
+- HTML/CSS
 
 ##Structure
 
